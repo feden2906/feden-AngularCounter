@@ -1,7 +1,6 @@
 <div class='calc-wrapper'>
   <app-title></app-title>
-  <app-result></app-result>
-  <app-buttons></app-buttons>
-  <app-input></app-input>
-<!--  {showError && <p><b className="text-error">Потрібно вказати число</b></p>}-->
+  <app-result [result]="result"></app-result>
+  <app-buttons [result]="result" (bubbleUp)="getNewResult($event)"></app-buttons>
+  <app-input [result]="result" (bubbleUp)="getNewResult($event)"></app-input>
 </div>

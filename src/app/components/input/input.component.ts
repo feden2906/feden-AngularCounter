@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Output, EventEmitter, Input} from '@angular/core';
 
 @Component({
   selector: 'app-input',
@@ -7,9 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputComponent implements OnInit {
 
+  @Input()
+  result;
+  @Output()
+  bubbleUp = new EventEmitter();
+
+  inputValue: number = null;
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  setInputValue(n): void {
+    this.inputValue = +n.target.value;
   }
 
+  setNewResult(): void {
+    if (this.inputValue !== 0){
+      this.bubbleUp.emit(this.inputValue+ this.result);
+    }
+  }
 }

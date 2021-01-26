@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-buttons',
@@ -7,9 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ButtonsComponent implements OnInit {
 
+  @Input()
+  result;
+
+  @Output()
+  bubbleUp = new EventEmitter();
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  calculation(num): void {
+    let newResult = this.result + num;
+    if (newResult < 0) {
+      newResult = 0;
+    }
+    this.bubbleUp.emit(newResult);
   }
 
+  reset(): void {
+    this.bubbleUp.emit(0);
+  }
 }

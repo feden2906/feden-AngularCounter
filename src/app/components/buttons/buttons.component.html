@@ -1,7 +1,7 @@
 <div class='btn-wrapper'>
-  <button class='btn'>+ 1</button>
-  <button class='btn'>+ 100</button>
-  <button class='btn'>- 1</button>
-  <button class='btn'>- 100</button>
-  <button class='btn'>Reset</button>
+  <button (click)="calculation(1)" class='btn'>+ 1</button>
+  <button (click)="calculation(100)" class='btn'>+ 100</button>
+  <button (click)="calculation(-1)" class='btn'>- 1</button>
+  <button (click)="calculation(-100)" class='btn'>- 100</button>
+  <button (click)="reset()" class='btn'>Reset</button>
 </div>

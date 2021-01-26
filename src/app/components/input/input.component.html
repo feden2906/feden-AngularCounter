@@ -1,7 +1,6 @@
 <div class='input-wrapper'>
   <label><b>Число:</b>
-    <input class="input"/>
+    <input (input)="setInputValue($event)" type="number" value="{{inputValue}}" class="input"/>
   </label>
-  <!--  class="showError ? 'input error' : 'input'"/>-->
-  <button class='btn2'>Submit</button>
+  <button (click)="setNewResult()" class='btn2'>Submit</button>
 </div>
