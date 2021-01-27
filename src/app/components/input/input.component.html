@@ -2,5 +2,6 @@
   <label><b>Число:</b>
     <input (input)="setInputValue($event)" type="number" value="{{inputValue}}" class="input"/>
   </label>
-  <button (click)="setNewResult()" class='btn2'>Submit</button>
+  <button *ngIf="inputValue" (click)="takeValue()" class='btn2'>Submit</button>
+  <button *ngIf="!inputValue" disabled class='btn2-2'>Submit</button>
 </div>

@@ -17,15 +17,15 @@ export class ButtonsComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  calculation(num): void {
-    let newResult = this.result + num;
-    if (newResult < 0) {
-      newResult = 0;
-    }
-    this.bubbleUp.emit(newResult);
-  }
+  // calculation(num): void {
+  //   let newResult = this.result + num;
+  //   if (newResult < 0) {
+  //     newResult = 0;
+  //   }
+  //   this.bubbleUp.emit(newResult);
+  // }
 
-  reset(): void {
-    this.bubbleUp.emit(0);
+  takeValue(num): void {
+    this.bubbleUp.emit(num);
   }
 }

@@ -13,8 +13,17 @@ export class CounterComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  getNewResult(num): void {
-    this.result = num;
+  setNewResult(num): void {
+
+    if (!isNaN(+num) || num === 'reset') {
+      let newResult = this.result + +num;
+
+      if (newResult < 0 || num === 'reset') {
+        newResult = 0;
+      }
+      this.result = newResult;
+    }
   }
+
 
 }

@@ -12,19 +12,18 @@ export class InputComponent implements OnInit {
   @Output()
   bubbleUp = new EventEmitter();
 
-  inputValue: number = null;
+  inputValue: '';
 
   constructor() { }
 
   ngOnInit(): void { }
 
-  setInputValue(n): void {
-    this.inputValue = +n.target.value;
+  setInputValue(e): void {
+    this.inputValue = e.target.value;
   }
 
-  setNewResult(): void {
-    if (this.inputValue !== 0){
-      this.bubbleUp.emit(this.inputValue+ this.result);
-    }
+  takeValue(): void {
+      this.bubbleUp.emit(this.inputValue);
+      this.inputValue = '';
   }
 }

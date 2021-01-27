@@ -1,6 +1,6 @@
 <div class='calc-wrapper'>
   <app-title></app-title>
   <app-result [result]="result"></app-result>
-  <app-buttons [result]="result" (bubbleUp)="getNewResult($event)"></app-buttons>
-  <app-input [result]="result" (bubbleUp)="getNewResult($event)"></app-input>
+  <app-buttons (bubbleUp)="setNewResult($event)"></app-buttons>
+  <app-input (bubbleUp)="setNewResult($event)"></app-input>
 </div>

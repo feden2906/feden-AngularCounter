@@ -13,6 +13,13 @@
   border-radius: 5px;
   border: 2px solid #474747;
 }
+.btn2-2 {
+  height: 39px;
+  width: 40%;
+  font-size: 17px;
+  border-radius: 5px;
+  border: 2px solid #474747;
+}
 
 .btn2:hover {
   background-color: #bebebe;
