@@ -12,7 +12,7 @@ export class ButtonsComponent implements OnInit {
   @Output()
   bubbleUp = new EventEmitter();
 
-  arr = [1, -1, 50, -50, 100, -100];
+  arr = [1, -1, 100, -100];
 
   ngOnInit(): void { }
 
