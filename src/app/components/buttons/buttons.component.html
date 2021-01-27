@@ -1,7 +1,3 @@
 <div class='btn-wrapper'>
-  <button (click)="takeValue(1)" class='btn'>+ 1</button>
-  <button (click)="takeValue(100)" class='btn'>+ 100</button>
-  <button (click)="takeValue(-1)" class='btn'>- 1</button>
-  <button (click)="takeValue(-100)" class='btn'>- 100</button>
-  <button (click)="takeValue('reset')" class='btn'>Reset</button>
+  <button *ngFor="let item of arr" (click)="takeValue(item)" class='btn'>{{item}}</button>
 </div>

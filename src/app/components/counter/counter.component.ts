@@ -9,8 +9,6 @@ export class CounterComponent implements OnInit {
 
   result = 0;
 
-  constructor() { }
-
   ngOnInit(): void { }
 
   setNewResult(num): void {
@@ -24,6 +22,5 @@ export class CounterComponent implements OnInit {
       this.result = newResult;
     }
   }
-
 
 }

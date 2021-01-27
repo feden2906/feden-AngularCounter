@@ -9,21 +9,12 @@ export class ButtonsComponent implements OnInit {
 
   @Input()
   result;
-
   @Output()
   bubbleUp = new EventEmitter();
 
-  constructor() { }
+  arr = [1, -1, 50, -50, 100, -100];
 
   ngOnInit(): void { }
-
-  // calculation(num): void {
-  //   let newResult = this.result + num;
-  //   if (newResult < 0) {
-  //     newResult = 0;
-  //   }
-  //   this.bubbleUp.emit(newResult);
-  // }
 
   takeValue(num): void {
     this.bubbleUp.emit(num);

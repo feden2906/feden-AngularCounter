@@ -10,7 +10,5 @@ export class ResultComponent implements OnInit {
   @Input()
   result;
 
-  constructor() { }
-
   ngOnInit(): void { }
 }
