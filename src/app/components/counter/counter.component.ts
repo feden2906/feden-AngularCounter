@@ -9,18 +9,23 @@ export class CounterComponent implements OnInit {
 
   result = 0;
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+  }
 
   setNewResult(num): void {
 
-    if (!isNaN(+num) || num === 'reset') {
-      let newResult = this.result + +num;
+    // if (!isNaN(+num) || num === 'reset') {
+    //   let newResult = this.result + +num;
+    //
+    //   if (newResult < 0 || num === 'reset') {
+    //     newResult = 0;
+    //   }
+    //   this.result = newResult;
+    // }
 
-      if (newResult < 0 || num === 'reset') {
-        newResult = 0;
-      }
-      this.result = newResult;
-    }
+    (num === 'reset' || this.result + +num < 0)
+      ? this.result = 0
+      : this.result += +num;
   }
 
 }
